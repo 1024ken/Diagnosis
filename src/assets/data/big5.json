@@ -1,0 +1,77 @@
+[
+  {
+    "type": "openness",
+    "name": "開放性",
+    "lower": "げんじつてき",
+    "upper": "ロマンチスト",
+    "threshold": 16.81,
+    "fiveThreshold": [
+      8,
+      11.524000000000001,
+      15.048000000000002,
+      18.247999999999998,
+      21.124000000000002,
+      24
+    ]
+  },
+  {
+    "type": "conscientiousness",
+    "name": "誠実性",
+    "lower": "だいたん",
+    "upper": "コツコツ",
+    "threshold": 16.69,
+    "fiveThreshold": [
+      8,
+      11.476,
+      14.952000000000002,
+      18.152,
+      21.076,
+      24
+    ]
+  },
+  {
+    "type": "extroversion",
+    "name": "外向性",
+    "lower": "ひかえめ",
+    "upper": "かっぱつ",
+    "threshold": 17.11,
+    "fiveThreshold": [
+      8,
+      11.644,
+      15.288,
+      18.488,
+      21.244,
+      24
+    ]
+  },
+  {
+    "type": "agreeableness",
+    "name": "協調性",
+    "lower": "自分だいじに",
+    "upper": "きくばり上手",
+    "threshold": 19,
+    "fiveThreshold": [
+      8,
+      12.4,
+      16.8,
+      20,
+      22,
+      24
+    ]
+  },
+  {
+    "type": "neuroticism",
+    "name": "情緒性",
+    "lower": "おおらか",
+    "upper": "せんさい",
+    "threshold": 16.9,
+    "fiveThreshold": [
+      8,
+      11.559999999999999,
+      15.119999999999997,
+      18.32,
+      21.16,
+      24
+    ]
+  }
+]

@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar color='primary'>
+    <ion-title>
+      <ng-container *ngIf="mode == 'init'"><img src="assets/imgs/ui_parts/logo_small.png"></ng-container>
+      <ng-container *ngIf="mode == 'partner'">あいしょうしんだん</ng-container>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding no-bounce>
+  <div class="illustration"><img src="assets/imgs/ui_parts/chara_ijin.png"></div>
+  <div class="description">
+    <ng-container *ngIf="mode == 'init'">
+      はじめまして！イ・ジンです！<br>
+      このアプリでは、自分やまわりの人のせいかくを、「偉人（いじん）スタイル」として知ることができるよ！<br>
+      今すぐしんだんしてみよう！
+    </ng-container>
+    <ng-container *ngIf="mode == 'partner'">
+      偉人スタイルであいしょうをしんだんしてみよう！<br>
+      <br>
+      しんだんしたい相手にこのがめんを見せて、ニックネームを入力してもらってね！
+    </ng-container>
+  </div>
+  <form (ngSubmit)="nextPage()">
+    <label for="nickname">
+      <ng-container *ngIf="mode == 'init'">ニックネーム</ng-container>
+      <ng-container *ngIf="mode == 'partner'">相手のニックネーム</ng-container>
+    </label>
+    <input type="text" name="nickname" placeholder="８文字以内にしてください" [(ngModel)]="nickname">
+    <button type="submit" ion-button block>偉人スタイルをしらべる</button>
+  </form>
+</ion-content>

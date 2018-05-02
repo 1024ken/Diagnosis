@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar color='primary'>
+    <ion-title>あいしょうしんだん</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content no-bounce>
+  <h1>相手をえらんでください</h1>
+  <ion-list>
+    <ion-item>
+      <ion-label>ひとりめ</ion-label>
+      <ion-select [(ngModel)]="entry1Id" submitText="OK" cancelText="キャンセル">
+        <ion-option *ngFor="let entry of entries;" value="{{entry.id}}">{{entry.nickname}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>ふたりめ</ion-label>
+      <ion-select [(ngModel)]="entry2Id" submitText="OK" cancelText="キャンセル">
+        <ion-option *ngFor="let entry of entries;" value="{{entry.id}}">{{entry.nickname}}</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <div class="navigation">
+    <button ion-button block (click)="nextPage()">しんだんする</button>
+  </div>
+</ion-content>

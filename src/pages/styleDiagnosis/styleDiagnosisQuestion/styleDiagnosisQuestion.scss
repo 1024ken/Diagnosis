@@ -1,0 +1,130 @@
+style-diagnosis-question {
+  ion-content {
+    ul.questions {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+  
+      li.question {
+        font-size: 2.0rem;
+        font-weight: 600;
+        color: color($colors, dark-high);
+        margin: 0 0 5vh 0;
+        animation-name: fadeIn;
+        animation-duration: 0.5s;
+        animation-timing-function: ease;
+        animation-iteration-count: 1;
+        animation-delay: 0s;
+
+        @keyframes fadeIn {
+          0% {opacity: 0}
+          100% {opacity: 1}
+        }
+
+        ul.buttons {
+          list-style-type: none;
+          padding: 0;
+          margin: 10px 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          li {
+            width: 33%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            button {
+              position: relative;
+              display: block;
+              width: 10vw;
+              height: 10vw;
+              max-width: 72px;
+              max-height: 72px;
+              background-color: transparent;
+              background-size: cover;
+              background-position: center;
+              background-image: url(../assets/imgs/ui_parts/checkbox.png); 
+
+              img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: calc(10vw * 176 / 144);
+                height: 10vw;
+                max-width: 88px;
+                max-height: 72px;
+                z-index: 1;
+              }
+
+              img.none {
+                display: none;
+              }
+
+              span {
+                visibility: hidden;
+              }
+            }
+
+            label {
+              font-size: 1.6rem;
+              font-weight: bold;
+              color: #888;
+            }
+          }
+        }
+      }
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      button {
+        margin: auto;
+        width: 35vw;
+        height: 3.0rem;
+      }
+    }
+  }
+
+  ion-footer {
+    background-color: color($colors, light);
+    padding: 10px 0;
+    border-top: 1px solid color($colors, light-low);
+
+    .progress-bar {
+      position: relative;
+      height: 1.2rem;
+      width: calc(100% - 40px);
+      overflow: hidden;
+      margin-top: 0.1rem;
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-bottom: -2vw;
+      background-color: rgb(222,222,222);
+      border-radius: 4px;
+      border: solid 2px #aaa;
+
+      .progress {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 0%;
+        background-color: color($colors, secondary);
+      }
+    }
+
+    .progress-status {
+      margin-top: 12px;
+      height: 1.6rem;
+      width: 100%;
+      font-size: 1.6rem;
+      text-align: center;
+    }
+  }
+}

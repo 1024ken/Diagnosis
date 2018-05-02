@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-navbar color='primary'> 
+    <ion-title>あいしょうしんだん</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content no-bounce>
+  <div class="compatibility-digest">
+    <div class="entry entry1" (click)="goToStyleDiagnosisResultPage(Entry1)">
+      <div class="name">{{Entry1Nickname}}</div>
+      <div class="figure"><img src="assets/imgs/great_men/figures/{{Entry1PersonalityId}}.png"></div>
+      <div class="great-man-name">
+        {{Entry1GreatManName}}
+        <ion-icon color="dark-high" name="md-arrow-dropright-circle"></ion-icon>
+      </div>
+    </div>
+    <div class="rate">
+      <div class="title">そっくり率</div>
+      <div class="percent">{{SynchronizationRate}}</div>
+      <round-progress [current]="SynchronizationRate" [max]="100"></round-progress>
+    </div>
+    <div class="entry entry2" (click)="goToStyleDiagnosisResultPage(Entry2)">
+      <div class="name">{{Entry2Nickname}}</div>
+      <div class="figure"><img src="assets/imgs/great_men/figures/{{Entry2PersonalityId}}.png"></div>
+      <div class="great-man-name">
+        {{Entry2GreatManName}}
+        <ion-icon color="dark-high" name="md-arrow-dropright-circle"></ion-icon>
+      </div>
+    </div>    
+  </div>
+  <ul class="compatibility-navigation">
+    <li (click)="changeCompatibilityDisplay(0)"><img src="assets/imgs/ui_parts/big5_icon_comment_{{getCompatibilityDisplayStatus(0)}}.png"></li>
+    <li *ngFor="let i of [1,2,3,4,5]" (click)="changeCompatibilityDisplay(i)">
+      <img src="assets/imgs/ui_parts/big5_icon_{{getBig5DisplayType(i-1)}}_{{getCompatibilityDisplayStatus(i)}}.png">
+    </li>
+  </ul>
+  <ion-slides class="compatibility" (ionSlideDidChange)="onCompatibilitySlideDidChange($event)" pager="true">
+    <ion-slide class="description">
+      <div class="inner">
+        <span [innerHTML]="Summary"></span>
+      </div>
+    </ion-slide>
+    <ion-slide class="big5" *ngFor="let element of Big5">
+      <div class="inner">
+        <div class="element {{element.type}}">
+          <h1>{{element.name}}</h1>
+          <ul class="rank">
+            <li *ngFor="let j of [0,1,2,3,4]" class="{{getRankStatus(element.type, j)}}">
+              <div *ngIf="getRankStatus(element.type, j) != 'none'" class="icons">
+                <img *ngIf="getEntry1Rank(element.type) == j"
+                  src="assets/imgs/great_men/icons/{{Entry1PersonalityId}}.png">
+                <img *ngIf="getEntry2Rank(element.type) == j"
+                  src="assets/imgs/great_men/icons/{{Entry2PersonalityId}}.png">
+              </div>
+            </li>
+          </ul>
+          <ul class="axis">
+            <li class="lower">{{element.lower}}</li>
+            <li class="upper">{{element.upper}}</li>
+          </ul>     
+          <div class="description">
+            <span [innerHTML]="getDescription(element.type)"></span>
+          </div>
+        </div>
+      </div>
+    </ion-slide>
+  </ion-slides>
+  <div class="date">しんだん日：{{Date | date:"y/M/d"}}</div>
+  <div class="comment">
+    <div class="inner">
+      <h1>偉人たちをコンプリートしよう！</h1>
+      <div class="description">
+        32人の偉人たちのくみ合わせであいしょうをかいせつ！<br>
+        コンプリートを目指して色々な人とあいしょうしんだんしてみよう！
+      </div>
+    </div>
+  </div>
+  <div class="navigation">
+    <button ion-button (click)="close()">あいしょういちらんへ戻る</button>
+  </div>
+</ion-content>

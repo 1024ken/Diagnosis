@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar color='primary'>
+    <ion-title>
+      <ng-container *ngIf="mode != 'partner'">偉人スタイルしんだん</ng-container>
+      <ng-container *ngIf="mode == 'partner'">あいしょうしんだん</ng-container>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ul class="questions">
+    <li class="question" *ngFor="let item of questionnaire.CurrentItems; let lastItem = last;">
+      {{item.text}}
+      <ul class="buttons">
+        <li>
+          <button name="scoreNo" (click)="answer(item, 'scoreNo', lastItem)">
+            <img [class.none]="item.selected != 'scoreNo'" src="assets/imgs/ui_parts/checkmark.png">
+            <span>{{item.selected == 'scoreNo' ? 'T' : 'F'}}</span>
+          </button>
+          <label for="scoreNo">いいえ</label>
+        </li>
+        <li>
+          <button name="scoreNeither" (click)="answer(item, 'scoreNeither', lastItem)">
+            <img [class.none]="item.selected != 'scoreNeither'" src="assets/imgs/ui_parts/checkmark.png">
+            <span>{{item.selected == 'scoreNeither' ? 'T' : 'F'}}</span>
+          </button>
+          <label for="scoreNeither">どちらでもない</label>
+        </li>
+        <li>
+          <button name="scoreYes" (click)="answer(item, 'scoreYes', lastItem)">
+            <img [class.none]="item.selected != 'scoreYes'" src="assets/imgs/ui_parts/checkmark.png">
+            <span>{{item.selected == 'scoreYes' ? 'T' : 'F'}}</span>
+          </button>
+          <label for="scoreYes">はい</label>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <div class="navigation" *ngIf="IsAnswered">
+    <button *ngIf="!IsFirstCollection" ion-button (click)="prevCollection()">前へ</button>
+    <button *ngIf="!IsLastCollection" ion-button (click)="nextCollection()">次へ</button>
+    <button *ngIf="IsLastCollection" ion-button (click)="result()">しんだん</button>
+  </div>
+</ion-content>
+<ion-footer>
+  <div class="progress-bar">
+    <div class="progress" [style.width]="questionnaire.Progress + '%'"></div>
+  </div>
+  <div class="progress-status">{{questionnaire.AnswerCount}}/{{questionnaire.QuestionCount}}</div>
+</ion-footer>
+
+

@@ -1,0 +1,248 @@
+style-diagnosis-result {
+  ion-content {
+    background-color: color($colors, light) !important;
+
+    .style-illustration {
+      background-color: color($colors, light);
+      max-height: 30vh;
+      width: 100vw;
+      text-align: center;
+
+      img {
+        max-height: 30vh;
+        vertical-align: bottom;
+      }
+    }
+
+    ion-slides.style-exposition {
+      height: 35rem;
+      background-color:#ffd0db;
+      margin-bottom: 1.0rem;
+
+      .swiper-pagination-bullet-active {
+        background-color: color($colors, primary);
+      }
+
+      ion-slide {
+        align-items: start;
+        height: 100%;
+        padding: 1.0rem;
+
+        .inner {
+          background-color: color($colors, light);
+          border-radius: 20px;
+          padding: 1.0rem 2.0rem;
+          height: 33rem;
+        }
+      }
+
+      ion-slide.description {
+        h1 {
+          padding: 0 1.0rem 1.0rem 1.0rem;
+          margin: 0;
+          font-size: 1.8rem;
+          font-weight: bold;
+          color: #7f4d50;
+          text-align: center;
+        }
+
+        .detail {
+          font-size: 1.8rem;
+          text-align: left;
+        }
+      }
+
+      ion-slide.big5 {
+        .element {
+          position: relative;
+          margin: 0 auto 1.5rem auto;
+          max-width: 640px;
+
+          h1 {
+            margin: 0 0 0.7rem 0;
+            height: 2.0rem;
+            line-height: 2.0rem;
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #444;
+          }
+
+          ul.rank {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 30%;
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            li {
+              width: 20%;
+              height: 2.0rem;
+              margin-left: 1px;
+              margin-right: 1px;
+              border-width: 18%;
+              border: 1px solid color($colors, light-low);
+              border-radius: 3px;
+            }
+
+            li.on {
+              border: 1px solid #fff;
+              box-shadow: 0 0 4px color($colors, dark-high);
+            }
+          }
+
+          ul.axis {
+            list-style-type: none;
+            padding: 0;
+            margin: calc(-2.0rem + (2.0rem - 1.3rem - 0.2rem * 2)/2) 0 0.5rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+
+            li {
+              width: 50%;
+              font-size: 1.3rem;
+              line-height: 1.4rem;
+              padding: 0.2rem 0;
+            }
+
+            li.lower {
+              text-align: left;
+
+              &::before {
+                content: '';
+                float: left;
+                margin-top: 0;
+                margin-left: calc(-1.4rem);
+                margin-right: calc(1.4rem / 3);
+                width: 0;
+                height: 0;
+                border: calc(1.4rem / 2) solid transparent;
+                border-right: calc(1.4rem / 2) solid color($colors, dark-high);
+              }
+            }
+
+            li.upper {
+              text-align: right;
+
+              &::after {
+                content: '';
+                float: right;
+                display: block;
+                margin-top: 0;
+                margin-left: calc(1.4rem / 3);
+                margin-right: calc(-1.4rem);
+                width: 0;
+                height: 0;
+                border: calc(1.4rem / 2) solid transparent;
+                border-left: calc(1.4rem / 2) solid color($colors, dark-high);
+              }
+            }
+          }
+        }
+
+        .openness ul.rank li {
+          background-color: color($colors, openness);
+        }
+        .openness ul.rank li.on {
+          background-color: color($colors, openness-active);
+        }
+        .conscientiousness ul.rank li {
+          background-color: color($colors, conscientiousness);
+        }
+        .conscientiousness ul.rank li.on {
+          background-color: color($colors, conscientiousness-active);
+        }
+        .extroversion ul.rank li {
+          background-color: color($colors, extroversion);
+        }
+        .extroversion ul.rank li.on {
+          background-color: color($colors, extroversion-active);
+        }
+        .agreeableness ul.rank li {
+          background-color: color($colors, agreeableness);
+        }
+        .agreeableness ul.rank li.on {
+          background-color: color($colors, agreeableness-active);
+        }
+        .neuroticism ul.rank li {
+          background-color: color($colors, neuroticism);
+        }
+        .neuroticism ul.rank li.on {
+          background-color: color($colors, neuroticism-active);
+        }
+      }
+    }
+  }
+
+  .comment {
+    padding: 1.0rem;
+    min-height: calc(1.5rem + 1.5rem + (10.0rem * 209 / 256) + 2.0rem);
+
+    .inner {
+      margin: 0 auto;
+      max-width: 640px;
+
+      h1 {
+        position: relative;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        color: #336;
+        margin: 0;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: calc((10.0rem * 209 / 256 + 1.5rem) * -1);
+          left: 0;
+          width: 10.0rem;
+          height: calc(10.0rem * 209 / 256);
+          background-image: url("../assets/imgs/ui_parts/chara_ijin_small.png");
+          background-size: 10.0rem calc(10.0rem * 209 / 256);
+          background-repeat: no-repeat;
+        }
+      }
+
+      .description {
+        position: relative;
+        margin-top: 1.0rem;
+        margin-left: calc(10.0rem + 1.0rem);
+        margin-right: 0.5rem;
+        margin-bottom: 1.0rem;
+        background-color: $background-color;
+        border: 1px solid color($colors, light-low);
+        border-radius: 1.5rem;
+        padding: 1.0rem;
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 1.8rem;
+          left: -1.2rem;
+          border-right: 1.2rem solid color($colors, light-low);
+          border-top: 0.8rem solid transparent;
+          border-bottom: 0.8rem solid transparent;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 1.8rem;
+          left: calc(-1.2rem + 2px);
+          border-right: 1.2rem solid $background-color;
+          border-top: 0.8rem solid transparent;
+          border-bottom: 0.8rem solid transparent; 
+        }
+      }
+    }
+  }
+
+  .navigation {
+    padding: 2.0rem 0 3.0rem 0;
+    text-align: center;
+  }
+}

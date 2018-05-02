@@ -1,0 +1,439 @@
+compatibility-diagnosis-result {
+  ion-content {
+    background-color: color($colors, light) !important;
+
+    .compatibility-digest {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100vw;
+      height: 30vh;
+
+      .entry {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+        width: 50vh;
+
+        .name {
+          height: 2.0rem;
+
+          &::after {
+            content: "さん";
+            font-size: 1.0rem;
+            color: color($colors, dark);
+            margin-left: 0.2rem;
+          }
+        }
+
+        .figure {
+          img {
+            height: 23vh;
+          }
+        }
+
+        .great-man-name {
+          color: rgb(46, 15, 16);
+          ion-icon {
+            font-size: 1.3rem;
+          }
+        }
+      }
+
+      .entry1 {
+        .name {
+          color: color($colors, primary);
+        }
+      }
+
+      .entry2 {
+        .name {
+          color: color($colors, secondary);
+        }
+      }
+
+      .rate {
+        position: absolute;
+        top: 2.0rem;
+        left: calc(50% - 10%);
+        width: 20%;
+        text-align: center;
+        font-weight: bold;
+
+        .title {
+          position: absolute;
+          top: calc(50% - (1.8rem/2) - 0.2rem - 1.0rem);
+          z-index: 1;
+          width: 100%;
+          font-size: 1.0rem;
+          text-shadow:
+            -1px -1px 0px color($colors, light-low),
+            -1px -1px 0px color($colors, light-low),
+            -1px 1px 0px color($colors, light-low),
+            -1px 1px 0px color($colors, light-low),
+            -1px 1px 0px color($colors, light-low);
+        }
+
+        .percent {
+          position: absolute;
+          top: calc(50% - (1.8rem/2));
+          z-index: 1;
+          width: 100%;
+          font-size: 1.8rem;
+
+          &::after {
+            content: "%";
+            font-size: 1.0rem;
+          }
+        }
+      }
+    }
+
+    ul.compatibility-navigation {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $background-color;
+
+      li {
+        width: 20%;
+        height: 5vh;
+        margin: 0.2rem;
+        margin-right: 0;
+        text-align: center;
+        background-color: color($colors, light);
+        padding: 3px;
+
+        &:nth-child(6) {
+          margin: 0.2rem;
+        }
+  
+        img {
+          height: 100%;
+        }
+      }
+    }
+
+    ion-slides.compatibility {
+      height: 33rem;
+      background-color:#ffd0db;
+
+      .swiper-pagination-bullet-active {
+        background-color: color($colors, primary);
+      }
+
+      ion-slide {
+        align-items: start;
+        padding: 1.0rem;
+
+        .inner {
+          background-color: color($colors, light);
+          border-radius: 20px;
+          padding: 1.0rem 2.0rem;
+          height: 31rem;
+          position: relative;
+          z-index: 0;
+        }
+      }
+
+      ion-slide.description {
+        padding: 1.0rem;
+  
+        .inner {
+          font-size: 1.8rem;
+          font-weight: bold;
+          color: #555;
+          text-align: left;
+  
+          .entry1-name {
+            color: color($colors, primary);
+          }
+  
+          .entry2-name {
+            color: color($colors, secondary);
+          }
+        }
+      }
+
+      ion-slide.big5 {
+        .inner {
+          .element {
+            max-width: 640px;
+            margin: 0 auto;
+
+            h1 {
+              margin-top: 0;
+              font-size: 1.8rem;
+              font-weight: bold;
+            }
+
+            ul.rank {
+              list-style-type: none;
+              padding: 0;
+              margin: 5.0rem 0 0 0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              li {
+                position: relative;
+                width: 20%;
+                height: 2.0rem;
+                margin-left: 1px;
+                margin-right: 1px;
+                border-width: 18%;
+                border: 1px solid color($colors, light-low);
+                border-radius: 3px;
+              }
+
+              li.entry1, li.entry2, li.entries {
+                border: 1px solid #fff;
+                box-shadow: 0 0 4px color($colors, dark-high);
+
+                .icons {
+                  position: absolute;
+                  top: -5.0rem;
+                  left: calc((100% - 5.0rem * 213 / 108) / 2);
+                  height: 5.0rem;
+                  width: calc(5.0rem * 213 / 108);
+                  z-index: -1;
+
+                  img {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                  }
+                }
+              }
+
+              li.entry1 {
+                background-color: color($colors, primary);
+              }
+
+              li.entry2 {
+                background-color: color($colors, secondary);
+              }
+
+              li.entries {
+                background-image: linear-gradient(
+                  -45deg,
+                  color($colors, secondary) 25%,
+                  color($colors, primary) 25%, color($colors, primary) 50%,
+                  color($colors, secondary) 50%, color($colors, secondary) 75%,
+                  color($colors, primary) 75%, color($colors, primary)
+                );
+                background-size: 20px 20px;
+
+                .icons {
+                  img:nth-child(1) {
+                    left: -20%;
+                  }
+                  img:nth-child(2) {
+                    left: 20%;
+                  }
+                }
+              }
+            }
+
+            ul.axis {
+              list-style-type: none;
+              padding: 0;
+              margin: 0.5rem 0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: #333;
+
+              li {
+                width: 50%;
+                font-size: 1.4rem;
+                line-height: 1.4rem;
+                padding: 0.2rem 0;
+              }
+
+              .lower {
+                text-align: left;
+
+                &::before {
+                  content: '';
+                  float: left;
+                  display: block;
+                  margin-top: 0;
+                  margin-left: calc(-1.4rem / 2);
+                  margin-right: calc(1.4rem / 2);
+                  width: 0;
+                  height: 0;
+                  border: calc(1.4rem / 2) solid transparent;
+                  border-right: calc(1.4rem / 2) solid color($colors, dark-high);
+                }
+              }
+
+              .upper {
+                text-align: right;
+
+                &::after {
+                  content: '';
+                  float: right;
+                  display: block;
+                  margin-top: 0;
+                  margin-left: calc(1.4rem / 2);
+                  margin-right: calc(-1.4rem / 2);
+                  width: 0;
+                  height: 0;
+                  border: calc(1.4rem / 2) solid transparent;
+                  border-left: calc(1.4rem / 2) solid color($colors, dark-high);
+                }
+              }
+            }
+
+            .description {
+              padding: 1.0rem 0;
+              text-align: left;
+              font-size: 1.6rem;
+              font-weight: 450;
+
+              .entry1-name {
+                color: color($colors, primary);
+              }
+      
+              .entry2-name {
+                color: color($colors, secondary);
+              }
+            }
+          }
+        }
+      }
+
+      .openness {
+        h1 {
+          color: color($colors, openness-active);
+        }
+
+        ul.rank > li {
+          background-color: color($colors, openness);
+        }
+      }
+
+      .conscientiousness {
+        h1 {
+          color: color($colors, conscientiousness-active);
+        }
+
+        ul.rank > li {
+          background-color: color($colors, conscientiousness);
+        }  
+      }
+
+      .extroversion {
+        h1 {
+          color: color($colors, extroversion-active);
+        }
+
+        ul.rank > li {
+          background-color: color($colors, extroversion);
+        }  
+      }
+
+      .agreeableness {
+        h1 {
+          color: color($colors, agreeableness-active);
+        }
+
+        ul.rank > li {
+          background-color: color($colors, agreeableness);
+        }  
+      }
+
+      .neuroticism {
+        h1 {
+          color: color($colors, neuroticism-active);
+        }
+
+        ul.rank > li {
+          background-color: color($colors, neuroticism);
+        }  
+      }
+    }
+  }
+
+  .date {
+    text-align: right;
+    margin: 0;
+    padding: 0.5rem 1.0rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #555;
+  }
+
+  .comment {
+    padding: 1.0rem;
+    min-height: calc(1.5rem + 1.5rem + (10.0rem * 209 / 256) + 2.0rem);
+
+    .inner {
+      margin: 0 auto;
+      max-width: 640px;
+
+      h1 {
+        position: relative;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        color: #336;
+        margin: 0;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: calc((10.0rem * 209 / 256 + 1.5rem) * -1);
+          left: 0;
+          width: 10.0rem;
+          height: calc(10.0rem * 209 / 256);
+          background-image: url("../assets/imgs/ui_parts/chara_ijin_small.png");
+          background-size: 10.0rem calc(10.0rem * 209 / 256);
+          background-repeat: no-repeat;
+        }
+      }
+
+      .description {
+        position: relative;
+        margin-top: 1.0rem;
+        margin-left: calc(10.0rem + 1.0rem);
+        margin-right: 0.5rem;
+        margin-bottom: 1.0rem;
+        background-color: $background-color;
+        border: 1px solid color($colors, light-low);
+        border-radius: 1.5rem;
+        padding: 1.0rem;
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 1.8rem;
+          left: -1.2rem;
+          border-right: 1.2rem solid color($colors, light-low);
+          border-top: 0.8rem solid transparent;
+          border-bottom: 0.8rem solid transparent;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 1.8rem;
+          left: calc(-1.2rem + 2px);
+          border-right: 1.2rem solid $background-color;
+          border-top: 0.8rem solid transparent;
+          border-bottom: 0.8rem solid transparent; 
+        }
+      }
+    }
+  }
+
+  .navigation {
+    padding: 2.0rem 0 3.0rem 0;
+    text-align: center;
+  }
+}

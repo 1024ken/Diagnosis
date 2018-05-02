@@ -1,0 +1,322 @@
+[
+  {
+    "number": 0,
+    "type": "openness",
+    "text": "ぼんやりといろいろと考えるのが楽しい",
+    "scoreNo": 1,
+    "scoreNeither": 2,
+    "scoreYes": 3
+  },
+  {
+    "number": 1,
+    "type": "openness",
+    "text": "よく空想にふける",
+    "scoreNo": 1,
+    "scoreNeither": 2,
+    "scoreYes": 3
+  },
+  {
+    "number": 2,
+    "type": "openness",
+    "text": "できそうにもないことをぼんやりと考えることがある",
+    "scoreNo": 1,
+    "scoreNeither": 2,
+    "scoreYes": 3
+  },
+  {
+    "number": 3,
+    "type": "openness",
+    "text": "わけのわからないものに興味をもつ",
+    "scoreNo": 1,
+    "scoreNeither": 2,
+    "scoreYes": 3
+  },
+  {
+    "number": 4,
+    "type": "openness",
+    "text": "時々、ぽかんとしている",
+    "scoreNo": 1,
+    "scoreNeither": 2,
+    "scoreYes": 3
+  },
+  {
+    "number": 5,
+    "type": "openness",
+    "text": "別世界へ行ってみたい",
+    "scoreNo": 1,
+    "scoreNeither": 2,
+    "scoreYes": 3
+  },
+  {
+    "number": 6,
+    "type": "openness",
+    "text": "あれこれ考えすぎて、何もできないことがある",
+    "scoreNo": 1,
+    "scoreNeither": 2,
+    "scoreYes": 3
+  },
+  {
+    "number": 7,
+    "type": "openness",
+    "text": "私には自分も知らない一面があると思う",
+    "scoreNo": 1,
+    "scoreNeither": 2,
+    "scoreYes": 3
+  },
+  {
+    "number": 8,
+    "type": "conscientiousness",
+    "text": "なんでも一生けんめいに取りくむ方だ",
+    "scoreNo": 1,
+    "scoreNeither": 2,
+    "scoreYes": 3
+  },
+  {
+    "number": 9,
+    "type": "conscientiousness",
+    "text": "会や集まりのとき、人よりすすんで働く",
+    "scoreNo": 1,
+    "scoreNeither": 2,
+    "scoreYes": 3
+  },
+  {
+    "number": 10,
+    "type": "conscientiousness",
+    "text": "きめられたしごとは責任を持ってやりとおす",
+    "scoreNo": 1,
+    "scoreNeither": 2,
+    "scoreYes": 3
+  },
+  {
+    "number": 11,
+    "type": "conscientiousness",
+    "text": "計画を立てて勉強している",
+    "scoreNo": 1,
+    "scoreNeither": 2,
+    "scoreYes": 3
+  },
+  {
+    "number": 12,
+    "type": "conscientiousness",
+    "text": "しなければいけないことははやく取りくむ方だ",
+    "scoreNo": 1,
+    "scoreNeither": 2,
+    "scoreYes": 3
+  },
+  {
+    "number": 13,
+    "type": "conscientiousness",
+    "text": "約束はきちんと守る",
+    "scoreNo": 1,
+    "scoreNeither": 2,
+    "scoreYes": 3
+  },
+  {
+    "number": 14,
+    "type": "conscientiousness",
+    "text": "しごとをまかされることが多い",
+    "scoreNo": 1,
+    "scoreNeither": 2,
+    "scoreYes": 3
+  },
+  {
+    "number": 15,
+    "type": "conscientiousness",
+    "text": "自分の気持ちをたいせつにする",
+    "scoreNo": 1,
+    "scoreNeither": 2,
+    "scoreYes": 3
+  },
+  {
+    "number": 16,
+    "type": "extroversion",
+    "text": "目立ちたがりやである",
+    "scoreNo": 1,
+    "scoreNeither": 2,
+    "scoreYes": 3
+  },
+  {
+    "number": 17,
+    "type": "extroversion",
+    "text": "じっとしているのが嫌いだ",
+    "scoreNo": 1,
+    "scoreNeither": 2,
+    "scoreYes": 3
+  },
+  {
+    "number": 18,
+    "type": "extroversion",
+    "text": "気が短い",
+    "scoreNo": 1,
+    "scoreNeither": 2,
+    "scoreYes": 3
+  },
+  {
+    "number": 19,
+    "type": "extroversion",
+    "text": "いたずらされるとだまっていられない",
+    "scoreNo": 1,
+    "scoreNeither": 2,
+    "scoreYes": 3
+  },
+  {
+    "number": 20,
+    "type": "extroversion",
+    "text": "よく考えずになんでもやってしまう",
+    "scoreNo": 1,
+    "scoreNeither": 2,
+    "scoreYes": 3
+  },
+  {
+    "number": 21,
+    "type": "extroversion",
+    "text": "じょうだんを言ったりふざけたりすることはあまりない",
+    "scoreNo": 3,
+    "scoreNeither": 2,
+    "scoreYes": 1
+  },
+  {
+    "number": 22,
+    "type": "extroversion",
+    "text": "あまりかっとならない",
+    "scoreNo": 3,
+    "scoreNeither": 2,
+    "scoreYes": 1
+  },
+  {
+    "number": 23,
+    "type": "extroversion",
+    "text": "おとなしい方だ",
+    "scoreNo": 3,
+    "scoreNeither": 2,
+    "scoreYes": 1
+  },
+  {
+    "number": 24,
+    "type": "agreeableness",
+    "text": "心からたよりにできる友だちが少ない",
+    "scoreNo": 3,
+    "scoreNeither": 2,
+    "scoreYes": 1
+  },
+  {
+    "number": 25,
+    "type": "agreeableness",
+    "text": "自分をつまらない人間だと思う",
+    "scoreNo": 3,
+    "scoreNeither": 2,
+    "scoreYes": 1
+  },
+  {
+    "number": 26,
+    "type": "agreeableness",
+    "text": "誰も私の話をよく聞いてくれない",
+    "scoreNo": 3,
+    "scoreNeither": 2,
+    "scoreYes": 1
+  },
+  {
+    "number": 27,
+    "type": "agreeableness",
+    "text": "人から冷たい人間だと思われている",
+    "scoreNo": 3,
+    "scoreNeither": 2,
+    "scoreYes": 1
+  },
+  {
+    "number": 28,
+    "type": "agreeableness",
+    "text": "気にいらないことが多い",
+    "scoreNo": 3,
+    "scoreNeither": 2,
+    "scoreYes": 1
+  },
+  {
+    "number": 29,
+    "type": "agreeableness",
+    "text": "人の気もちをりかいしようとは思わない",
+    "scoreNo": 3,
+    "scoreNeither": 2,
+    "scoreYes": 1
+  },
+  {
+    "number": 30,
+    "type": "agreeableness",
+    "text": "だれとでも仲良くなれる",
+    "scoreNo": 1,
+    "scoreNeither": 2,
+    "scoreYes": 3
+  },
+  {
+    "number": 31,
+    "type": "agreeableness",
+    "text": "まわりに親切な人が多い",
+    "scoreNo": 1,
+    "scoreNeither": 2,
+    "scoreYes": 3
+  },
+  {
+    "number": 32,
+    "type": "neuroticism",
+    "text": "失敗しないかといつも心配だ",
+    "scoreNo": 1,
+    "scoreNeither": 2,
+    "scoreYes": 3
+  },
+  {
+    "number": 33,
+    "type": "neuroticism",
+    "text": "まちがいをしないかと、気になる",
+    "scoreNo": 1,
+    "scoreNeither": 2,
+    "scoreYes": 3
+  },
+  {
+    "number": 34,
+    "type": "neuroticism",
+    "text": "ちょっとしたことをくよくよ気にする",
+    "scoreNo": 1,
+    "scoreNeither": 2,
+    "scoreYes": 3
+  },
+  {
+    "number": 35,
+    "type": "neuroticism",
+    "text": "人から見られているとおちつかない",
+    "scoreNo": 1,
+    "scoreNeither": 2,
+    "scoreYes": 3
+  },
+  {
+    "number": 36,
+    "type": "neuroticism",
+    "text": "なかなか決心がつかない",
+    "scoreNo": 1,
+    "scoreNeither": 2,
+    "scoreYes": 3
+  },
+  {
+    "number": 37,
+    "type": "neuroticism",
+    "text": "はずかしがりやである",
+    "scoreNo": 1,
+    "scoreNeither": 2,
+    "scoreYes": 3
+  },
+  {
+    "number": 38,
+    "type": "neuroticism",
+    "text": "なにをしても、うまくいかないような気がする",
+    "scoreNo": 1,
+    "scoreNeither": 2,
+    "scoreYes": 3
+  },
+  {
+    "number": 39,
+    "type": "neuroticism",
+    "text": "人のすることが気になる",
+    "scoreNo": 1,
+    "scoreNeither": 2,
+    "scoreYes": 3
+  }
+]

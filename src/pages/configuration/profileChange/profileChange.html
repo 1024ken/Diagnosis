@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-navbar color='primary'>
+    <ion-title>プロフィールへんこう</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding no-bounce>
+  <h1>へんこうしたいニックネームを入力してください</h1>
+  <form (ngSubmit)="change()">
+    <label for="nickname">ニックネーム</label>
+    <input type="text" name="nickname" placeholder="８文字以内にしてください" [(ngModel)]="nickname">
+    <button type="submit" ion-button block>へんこうする</button>
+  </form>
+</ion-content>

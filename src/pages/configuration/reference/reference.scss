@@ -1,0 +1,17 @@
+page-reference {
+  ion-content {
+    ul {
+      list-style-type: disc;
+      list-style-position: outside;
+      padding: 0 1.0rem;
+
+      li {
+        list-style-type: none;
+        margin-left: 2rem;
+        text-indent: -2rem;
+        padding-top: 1.0rem;
+        padding-bottom: 1.0rem;
+      }
+    }
+  }
+}

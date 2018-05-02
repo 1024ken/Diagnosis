@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar color='primary'>
+    <ion-title>あいしょういちらん</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div class="navigation" ion-fixed>
+    <button (click)="selectAction()">
+      <img class="app-icon" src="assets/imgs/ui_parts/app_icon.png" >
+      あたらしくあいしょうをしらべる
+      <ion-icon color="primary" name="md-add-circle"></ion-icon>
+    </button>
+  </div>
+  <ion-list class="results">
+    <ion-item-sliding *ngFor="let pair of Pairs">     
+      <ion-item (click)="goToResultPage(pair)">
+        <div class="figures">
+          <img class="figure entry1" src="assets/imgs/great_men/figures/smalls/{{getPersonalityId(pair.entry1)}}.png">
+          <span class="multiply"></span>
+          <img class="figure entry2" src="assets/imgs/great_men/figures/smalls/{{getPersonalityId(pair.entry2)}}.png">
+        </div>
+        <div class="names">
+          <div class="entry1">{{pair.entry1.nickname}}</div>
+          <div class="entry2">{{pair.entry2.nickname}}</div>
+        </div>
+        <div class="date">{{pair.date | date:"y/M/d"}}</div>
+        <div class="rate">
+          <div class="title">そっくり率</div>
+          <div class="percent">{{pair.synchronizationRate}}</div>
+          <round-progress [current]="pair.synchronizationRate" [max]="100"></round-progress>
+        </div>
+      </ion-item>
+      <ion-item-options side="right">
+        <button ion-button (click)="delete(pair)" color="danger">消す</button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

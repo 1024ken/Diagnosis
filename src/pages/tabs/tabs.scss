@@ -1,0 +1,19 @@
+page-tabs {
+  ion-tabs {
+    .tabbar {
+      a.tab-button {
+        ion-icon {
+          overflow: visible !important;
+
+          &::before {
+            font-size: 30px;
+          }
+        }
+
+        .tab-button-text {
+          margin-top: 1px;
+        }
+      }  
+    }
+  }
+}

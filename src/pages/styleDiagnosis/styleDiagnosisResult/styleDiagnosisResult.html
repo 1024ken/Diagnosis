@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar color='primary'>
+    <ion-title>
+      <ng-container *ngIf="mode != 'result'">あなたの偉人スタイル</ng-container>
+      <ng-container *ngIf="mode == 'result'">偉人スタイル</ng-container>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content no-bounce>
+  <div class="style-illustration">
+    <img src="assets/imgs/great_men/signboards/{{PersonalityId}}.png">
+  </div>
+  <ion-slides class="style-exposition" pager="true">
+    <ion-slide class="description">
+      <div class="inner">
+        <h1 [innerHTML]="ShortDescription"></h1>
+        <div class="detail">
+          <span [innerHTML]="LongDescription"></span>
+        </div>
+      </div>
+    </ion-slide>
+    <ion-slide class="big5">
+      <div class="inner">
+        <div *ngFor="let element of Big5" class="element {{element.type}}">
+          <h1 class="name">{{element.name}}</h1>
+          <ul class="rank">
+            <li *ngFor="let i of [0,1,2,3,4]" [class.on]="getRank(element.type) == i"></li>
+          </ul>
+          <ul class="axis">
+            <li class="lower">{{element.lower}}</li>
+            <li class="upper">{{element.upper}}</li>
+          </ul>
+        </div>
+      </div>
+    </ion-slide>
+  </ion-slides>
+  <div class="comment">
+    <div class="inner">
+      <h1>「ビッグ・ファイブ」でしっかりチェック！</h1>
+      <div class="description">
+        人のせいかくをつくっている５つのパーツを「ビッグ・ファイブ」といいます。世界でもっとも使われている、心理学の考え方です。
+      </div>
+    </div>
+  </div>
+  <div class="navigation">
+    <button *ngIf="mode == 'top'" ion-button (click)="goToStyleDiagnosisQuestionPage()">再度、偉人スタイルをしんだんする</button>
+    <button *ngIf="mode == 'partner'" ion-button (click)="goToCompatibilityDiagnosisResultPage()">あいしょうをしんだんする</button>
+    <button *ngIf="mode == 'result'" ion-button (click)="close()">あいしょうしんだんへ戻る</button>
+  </div>
+</ion-content>

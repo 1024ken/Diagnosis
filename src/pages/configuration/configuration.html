@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar color='primary'>
+    <ion-title>せってい</ion-title>
+    <ion-title>
+      <ng-container *ngIf="!IsDebug">せってい</ng-container>
+      <ng-container *ngIf="IsDebug"><span (click)="doDebug()">せってい</span></ng-container>
+    </ion-title>  
+  </ion-navbar>
+</ion-header>
+<ion-content no-bounce>
+  <div class="navigation">
+    <button ion-button block
+      (click)="goToProfileChangePage()">プロフィールへんこう</button>
+    <button ion-button block
+      (click)="deleteEntries()">相手のしんだんを消す</button>
+    <button ion-button block
+      (click)="goToReferencePage()">参考文献</button>
+    <button ion-button block
+      (click)="goToLicensePage()">ライセンス</button>
+    <button ion-button block>
+      <a href="mailto:seikaku@mintflag.com">お問い合わせ</a>
+    </button>  
+  </div>
+</ion-content>
